@@ -19,6 +19,7 @@
 		BDD95B5B239948610000B84D /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD95B5A239948610000B84D /* ExchangeViewController.swift */; };
 		BDD95B5D239948770000B84D /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD95B5C239948770000B84D /* TranslateViewController.swift */; };
 		BDD95B5F239948870000B84D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD95B5E239948870000B84D /* WeatherViewController.swift */; };
+		BDD95B61239952F90000B84D /* testbGit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD95B60239952F90000B84D /* testbGit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		BDD95B5A239948610000B84D /* ExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
 		BDD95B5C239948770000B84D /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		BDD95B5E239948870000B84D /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		BDD95B60239952F90000B84D /* testbGit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testbGit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		BD5992C323990A7F00AF11CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDD95B60239952F90000B84D /* testbGit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				BD5992B023990A4E00AF11CC /* AppDelegate.swift in Sources */,
 				BDD95B5F239948870000B84D /* WeatherViewController.swift in Sources */,
 				BDD95B5D239948770000B84D /* TranslateViewController.swift in Sources */,
+				BDD95B61239952F90000B84D /* testbGit.swift in Sources */,
 				BDD95B5B239948610000B84D /* ExchangeViewController.swift in Sources */,
 				BD5992B223990A4E00AF11CC /* SceneDelegate.swift in Sources */,
 			);
