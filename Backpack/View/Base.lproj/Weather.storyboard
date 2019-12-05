@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BQ4-JL-buN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather-->
+        <scene sceneID="gmr-2Q-Sbx">
+            <objects>
+                <viewController id="BQ4-JL-buN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="prr-q1-7NM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeatherBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vEq-ue-CZ4">
+                                <rect key="frame" x="0.0" y="498" width="414" height="398"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="r5Y-l4-NBA" userLabel="Stack View Title">
+                                <rect key="frame" x="167" y="49" width="80" height="97"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeatherIcon" translatesAutoresizingMaskIntoConstraints="NO" id="QYH-vc-tNP">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="80D-DV-qIq"/>
+                                            <constraint firstAttribute="height" constant="80" id="CCW-Xx-ILh"/>
+                                            <constraint firstAttribute="width" secondItem="QYH-vc-tNP" secondAttribute="height" multiplier="1:1" id="Kyx-ar-UfS"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My exchanges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zh8-Wd-t8h">
+                                        <rect key="frame" x="0.0" y="83" width="80" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" red="0.4431372549" green="0.77897350509999996" blue="0.67642631109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jd6-fb-dT0" userLabel="Stack View exchange">
+                                <rect key="frame" x="143.5" y="180" width="127" height="88.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYN-bR-uny">
+                                        <rect key="frame" x="0.0" y="0.0" width="127" height="34.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                        <color key="textColor" red="0.4431372549" green="0.77897350509999996" blue="0.67642631109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tZs-1h-g29">
+                                        <rect key="frame" x="15" y="42.5" width="97.5" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swt-jo-Ef7">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="46"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzt-1J-UCb">
+                                                <rect key="frame" x="52.5" y="0.0" width="45" height="46"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="efd-J0-T9S" userLabel="Stack View exchange">
+                                <rect key="frame" x="150" y="316" width="114" height="88.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glZ-0w-Vd8">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="34.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                        <color key="textColor" red="0.4431372549" green="0.77897350509999996" blue="0.67642631109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DT2-cx-TRL">
+                                        <rect key="frame" x="8.5" y="42.5" width="97.5" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6B-9R-fOa">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="46"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yo9-NT-f3z">
+                                                <rect key="frame" x="52.5" y="0.0" width="45" height="46"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="M5l-E4-t6y" userLabel="Stack View buton">
+                                <rect key="frame" x="75" y="448" width="264" height="119"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5b-ig-iXe">
+                                        <rect key="frame" x="0.0" y="0.0" width="264" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFx-Co-CyF">
+                                        <rect key="frame" x="0.0" y="85" width="264" height="34"/>
+                                        <color key="backgroundColor" red="0.4431372549" green="0.77897350509999996" blue="0.67642631109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Comparate"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0050031482239999998" green="0.085518695409999998" blue="0.1313133538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vEq-ue-CZ4" firstAttribute="trailing" secondItem="qhZ-UK-hmm" secondAttribute="trailing" id="9Ed-41-wiU"/>
+                            <constraint firstItem="vEq-ue-CZ4" firstAttribute="leading" secondItem="qhZ-UK-hmm" secondAttribute="leading" id="9ey-MF-Pp1"/>
+                            <constraint firstItem="Jd6-fb-dT0" firstAttribute="top" secondItem="r5Y-l4-NBA" secondAttribute="bottom" constant="34" id="CSK-OL-b7M"/>
+                            <constraint firstItem="r5Y-l4-NBA" firstAttribute="top" secondItem="qhZ-UK-hmm" secondAttribute="top" constant="5" id="E1k-Kf-aS6"/>
+                            <constraint firstItem="vEq-ue-CZ4" firstAttribute="top" secondItem="qhZ-UK-hmm" secondAttribute="top" constant="454" id="GVk-kh-le1"/>
+                            <constraint firstItem="efd-J0-T9S" firstAttribute="centerX" secondItem="prr-q1-7NM" secondAttribute="centerX" id="M6d-Oe-MQR"/>
+                            <constraint firstItem="M5l-E4-t6y" firstAttribute="leading" secondItem="qhZ-UK-hmm" secondAttribute="leading" constant="75" id="QNI-zX-Uda"/>
+                            <constraint firstItem="qhZ-UK-hmm" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="M5l-E4-t6y" secondAttribute="bottom" constant="295" id="TBX-6F-bhm"/>
+                            <constraint firstItem="r5Y-l4-NBA" firstAttribute="centerX" secondItem="vEq-ue-CZ4" secondAttribute="centerX" id="Zmd-l7-RQD"/>
+                            <constraint firstItem="efd-J0-T9S" firstAttribute="top" secondItem="Jd6-fb-dT0" secondAttribute="bottom" constant="47.5" id="bJf-tm-060"/>
+                            <constraint firstItem="qhZ-UK-hmm" firstAttribute="trailing" secondItem="M5l-E4-t6y" secondAttribute="trailing" constant="75" id="c87-tw-eSt"/>
+                            <constraint firstItem="Jd6-fb-dT0" firstAttribute="centerX" secondItem="prr-q1-7NM" secondAttribute="centerX" id="dgj-9T-VT1"/>
+                            <constraint firstItem="M5l-E4-t6y" firstAttribute="top" secondItem="efd-J0-T9S" secondAttribute="bottom" constant="43.5" id="lEP-PI-PNO"/>
+                            <constraint firstAttribute="bottom" secondItem="vEq-ue-CZ4" secondAttribute="bottom" id="twa-nv-jqf"/>
+                            <constraint firstItem="r5Y-l4-NBA" firstAttribute="centerX" secondItem="Jd6-fb-dT0" secondAttribute="centerX" id="yDP-3D-NdX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qhZ-UK-hmm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Weather" image="cloud.fill" catalog="system" id="r2I-ex-kR0">
+                        <color key="badgeColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dg3-uD-Qox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="987" y="687"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="WeatherBackground" width="987.5" height="1234"/>
+        <image name="WeatherIcon" width="128" height="128"/>
+        <image name="cloud.fill" catalog="system" width="64" height="42"/>
+    </resources>
+</document>

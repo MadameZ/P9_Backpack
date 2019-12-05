@@ -9,25 +9,56 @@
 /* Begin PBXBuildFile section */
 		BD5992B023990A4E00AF11CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5992AF23990A4E00AF11CC /* AppDelegate.swift */; };
 		BD5992B223990A4E00AF11CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5992B123990A4E00AF11CC /* SceneDelegate.swift */; };
-		BD5992B423990A4E00AF11CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5992B323990A4E00AF11CC /* ViewController.swift */; };
 		BD5992B723990A4E00AF11CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5992B523990A4E00AF11CC /* Main.storyboard */; };
 		BD5992B923990A5100AF11CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD5992B823990A5100AF11CC /* Assets.xcassets */; };
 		BD5992BC23990A5100AF11CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5992BA23990A5100AF11CC /* LaunchScreen.storyboard */; };
+		BD5992CE2399104C00AF11CC /* BackpackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5992CD2399104C00AF11CC /* BackpackTests.swift */; };
+		BD5992D72399148300AF11CC /* Exchange.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5992D52399148300AF11CC /* Exchange.storyboard */; };
+		BD5992D9239914A500AF11CC /* Translate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5992D8239914A500AF11CC /* Translate.storyboard */; };
+		BD5992DC239914B800AF11CC /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5992DA239914B800AF11CC /* Weather.storyboard */; };
+		BDD95B5B239948610000B84D /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD95B5A239948610000B84D /* ExchangeViewController.swift */; };
+		BDD95B5D239948770000B84D /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD95B5C239948770000B84D /* TranslateViewController.swift */; };
+		BDD95B5F239948870000B84D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD95B5E239948870000B84D /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD5992D02399104C00AF11CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD5992A423990A4E00AF11CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD5992AB23990A4E00AF11CC;
+			remoteInfo = Backpack;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BD5992AC23990A4E00AF11CC /* Backpack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Backpack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5992AF23990A4E00AF11CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD5992B123990A4E00AF11CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD5992B323990A4E00AF11CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD5992B623990A4E00AF11CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD5992B823990A5100AF11CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD5992BB23990A5100AF11CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD5992BD23990A5100AF11CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD5992CB2399104C00AF11CC /* BackpackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackpackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD5992CD2399104C00AF11CC /* BackpackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackpackTests.swift; sourceTree = "<group>"; };
+		BD5992CF2399104C00AF11CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD5992D62399148300AF11CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Exchange.storyboard; sourceTree = "<group>"; };
+		BD5992D8239914A500AF11CC /* Translate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Translate.storyboard; sourceTree = SOURCE_ROOT; };
+		BD5992DB239914B800AF11CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Weather.storyboard; sourceTree = "<group>"; };
+		BDD95B5A239948610000B84D /* ExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
+		BDD95B5C239948770000B84D /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		BDD95B5E239948870000B84D /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BD5992A923990A4E00AF11CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD5992C82399104C00AF11CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				BD5992AE23990A4E00AF11CC /* Backpack */,
+				BD5992CC2399104C00AF11CC /* BackpackTests */,
 				BD5992AD23990A4E00AF11CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				BD5992AC23990A4E00AF11CC /* Backpack.app */,
+				BD5992CB2399104C00AF11CC /* BackpackTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +89,61 @@
 		BD5992AE23990A4E00AF11CC /* Backpack */ = {
 			isa = PBXGroup;
 			children = (
-				BD5992AF23990A4E00AF11CC /* AppDelegate.swift */,
-				BD5992B123990A4E00AF11CC /* SceneDelegate.swift */,
-				BD5992B323990A4E00AF11CC /* ViewController.swift */,
-				BD5992B523990A4E00AF11CC /* Main.storyboard */,
-				BD5992B823990A5100AF11CC /* Assets.xcassets */,
-				BD5992BA23990A5100AF11CC /* LaunchScreen.storyboard */,
-				BD5992BD23990A5100AF11CC /* Info.plist */,
+				BD5992C623990A8F00AF11CC /* Supporting FIles */,
+				BD5992C323990A7F00AF11CC /* Model */,
+				BD5992C523990A8900AF11CC /* Controller */,
+				BD5992C423990A8400AF11CC /* View */,
 			);
 			path = Backpack;
+			sourceTree = "<group>";
+		};
+		BD5992C323990A7F00AF11CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD5992C423990A8400AF11CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD5992DA239914B800AF11CC /* Weather.storyboard */,
+				BD5992D8239914A500AF11CC /* Translate.storyboard */,
+				BD5992D52399148300AF11CC /* Exchange.storyboard */,
+				BD5992B523990A4E00AF11CC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD5992C523990A8900AF11CC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDD95B5A239948610000B84D /* ExchangeViewController.swift */,
+				BDD95B5C239948770000B84D /* TranslateViewController.swift */,
+				BDD95B5E239948870000B84D /* WeatherViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BD5992C623990A8F00AF11CC /* Supporting FIles */ = {
+			isa = PBXGroup;
+			children = (
+				BD5992B823990A5100AF11CC /* Assets.xcassets */,
+				BD5992BA23990A5100AF11CC /* LaunchScreen.storyboard */,
+				BD5992AF23990A4E00AF11CC /* AppDelegate.swift */,
+				BD5992B123990A4E00AF11CC /* SceneDelegate.swift */,
+				BD5992BD23990A5100AF11CC /* Info.plist */,
+			);
+			path = "Supporting FIles";
+			sourceTree = "<group>";
+		};
+		BD5992CC2399104C00AF11CC /* BackpackTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD5992CD2399104C00AF11CC /* BackpackTests.swift */,
+				BD5992CF2399104C00AF11CC /* Info.plist */,
+			);
+			path = BackpackTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +166,24 @@
 			productReference = BD5992AC23990A4E00AF11CC /* Backpack.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BD5992CA2399104C00AF11CC /* BackpackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD5992D22399104C00AF11CC /* Build configuration list for PBXNativeTarget "BackpackTests" */;
+			buildPhases = (
+				BD5992C72399104C00AF11CC /* Sources */,
+				BD5992C82399104C00AF11CC /* Frameworks */,
+				BD5992C92399104C00AF11CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD5992D12399104C00AF11CC /* PBXTargetDependency */,
+			);
+			name = BackpackTests;
+			productName = BackpackTests;
+			productReference = BD5992CB2399104C00AF11CC /* BackpackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +196,10 @@
 				TargetAttributes = {
 					BD5992AB23990A4E00AF11CC = {
 						CreatedOnToolsVersion = 11.2.1;
+					};
+					BD5992CA2399104C00AF11CC = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = BD5992AB23990A4E00AF11CC;
 					};
 				};
 			};
@@ -116,6 +217,7 @@
 			projectRoot = "";
 			targets = (
 				BD5992AB23990A4E00AF11CC /* Backpack */,
+				BD5992CA2399104C00AF11CC /* BackpackTests */,
 			);
 		};
 /* End PBXProject section */
@@ -126,8 +228,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD5992BC23990A5100AF11CC /* LaunchScreen.storyboard in Resources */,
+				BD5992DC239914B800AF11CC /* Weather.storyboard in Resources */,
+				BD5992D72399148300AF11CC /* Exchange.storyboard in Resources */,
+				BD5992D9239914A500AF11CC /* Translate.storyboard in Resources */,
 				BD5992B923990A5100AF11CC /* Assets.xcassets in Resources */,
 				BD5992B723990A4E00AF11CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD5992C92399104C00AF11CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,13 +250,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD5992B423990A4E00AF11CC /* ViewController.swift in Sources */,
 				BD5992B023990A4E00AF11CC /* AppDelegate.swift in Sources */,
+				BDD95B5F239948870000B84D /* WeatherViewController.swift in Sources */,
+				BDD95B5D239948770000B84D /* TranslateViewController.swift in Sources */,
+				BDD95B5B239948610000B84D /* ExchangeViewController.swift in Sources */,
 				BD5992B223990A4E00AF11CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD5992C72399104C00AF11CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD5992CE2399104C00AF11CC /* BackpackTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD5992D12399104C00AF11CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD5992AB23990A4E00AF11CC /* Backpack */;
+			targetProxy = BD5992D02399104C00AF11CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BD5992B523990A4E00AF11CC /* Main.storyboard */ = {
@@ -161,6 +291,22 @@
 				BD5992BB23990A5100AF11CC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BD5992D52399148300AF11CC /* Exchange.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD5992D62399148300AF11CC /* Base */,
+			);
+			name = Exchange.storyboard;
+			sourceTree = "<group>";
+		};
+		BD5992DA239914B800AF11CC /* Weather.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD5992DB239914B800AF11CC /* Base */,
+			);
+			name = Weather.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -285,7 +431,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Backpack/Info.plist;
+				DEVELOPMENT_TEAM = UDQ9NTHH3T;
+				INFOPLIST_FILE = "$(SRCROOT)/Backpack/Supporting FIles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +449,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Backpack/Info.plist;
+				DEVELOPMENT_TEAM = UDQ9NTHH3T;
+				INFOPLIST_FILE = "$(SRCROOT)/Backpack/Supporting FIles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +459,44 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BD5992D32399104C00AF11CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BackpackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.carolinezaini.BackpackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Backpack.app/Backpack";
+			};
+			name = Debug;
+		};
+		BD5992D42399104C00AF11CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BackpackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.carolinezaini.BackpackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Backpack.app/Backpack";
 			};
 			name = Release;
 		};
@@ -331,6 +517,15 @@
 			buildConfigurations = (
 				BD5992C123990A5100AF11CC /* Debug */,
 				BD5992C223990A5100AF11CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD5992D22399104C00AF11CC /* Build configuration list for PBXNativeTarget "BackpackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD5992D32399104C00AF11CC /* Debug */,
+				BD5992D42399104C00AF11CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
