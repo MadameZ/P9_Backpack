@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WR5-gN-8FM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WR5-gN-8FM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,51 +10,40 @@
         <!--Exchange-->
         <scene sceneID="am6-RJ-qXm">
             <objects>
-                <viewController id="WR5-gN-8FM" sceneMemberID="viewController">
+                <viewController id="WR5-gN-8FM" customClass="ExchangeViewController" customModule="Backpack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oyF-Nt-Xie">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ExchangeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="UlC-FT-ipR">
-                                <rect key="frame" x="0.0" y="498.5" width="414" height="397.5"/>
+                                <rect key="frame" x="0.0" y="475" width="414" height="401"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="dpN-Ug-X2K" userLabel="Stack View Title">
-                                <rect key="frame" x="167" y="49" width="80" height="97"/>
+                                <rect key="frame" x="177" y="49" width="60" height="73"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExchangeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="IHS-6I-8bO">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="0M6-P9-iQl"/>
-                                            <constraint firstAttribute="width" constant="80" id="GHt-dH-cMh"/>
+                                            <constraint firstAttribute="height" constant="60" id="0M6-P9-iQl"/>
+                                            <constraint firstAttribute="width" constant="60" id="GHt-dH-cMh"/>
                                             <constraint firstAttribute="width" secondItem="IHS-6I-8bO" secondAttribute="height" multiplier="1:1" id="zd6-as-IDn"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My exchanges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Io-0t-e2b">
-                                        <rect key="frame" x="0.0" y="83" width="80" height="14"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                        <rect key="frame" x="0.0" y="63" width="60" height="10"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="9"/>
                                         <color key="textColor" red="0.4431372549" green="0.77897350509999996" blue="0.67642631109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-st-wbI" userLabel="Stack View buton">
-                                <rect key="frame" x="75" y="469" width="264" height="98"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your current value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yr-bO-WTH">
-                                        <rect key="frame" x="0.0" y="0.0" width="264" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuP-aE-hw4">
-                                        <rect key="frame" x="0.0" y="64" width="264" height="34"/>
-                                        <color key="backgroundColor" red="0.4431372549" green="0.77897350509999996" blue="0.67642631109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Exchange"/>
-                                    </button>
-                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="gK1-dO-cpd"/>
+                                    <constraint firstAttribute="width" secondItem="dpN-Ug-X2K" secondAttribute="height" multiplier="60:73" id="vPR-Ky-dbt"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WA4-nB-7qJ" userLabel="Stack View exchange">
-                                <rect key="frame" x="140.5" y="246" width="133.5" height="123"/>
+                                <rect key="frame" x="140.5" y="184" width="133.5" height="123"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqu-f0-UnE">
                                         <rect key="frame" x="0.0" y="0.0" width="133.5" height="69"/>
@@ -70,20 +59,43 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-st-wbI" userLabel="Stack View buton">
+                                <rect key="frame" x="80" y="376" width="254" height="98"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your current value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yr-bO-WTH">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuP-aE-hw4">
+                                        <rect key="frame" x="0.0" y="64" width="254" height="34"/>
+                                        <color key="backgroundColor" red="0.4431372549" green="0.77897350509999996" blue="0.67642631109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Exchange"/>
+                                        <connections>
+                                            <action selector="tappedExchangeButton:" destination="WR5-gN-8FM" eventType="touchUpInside" id="1g7-8V-dq4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.029368903490000001" green="0.077001370489999998" blue="0.14341667289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WA4-nB-7qJ" firstAttribute="top" secondItem="dpN-Ug-X2K" secondAttribute="bottom" constant="100" id="0kp-hA-1QX"/>
-                            <constraint firstItem="WA4-nB-7qJ" firstAttribute="centerX" secondItem="oyF-Nt-Xie" secondAttribute="centerX" id="571-YG-cDb"/>
-                            <constraint firstItem="dpN-Ug-X2K" firstAttribute="centerX" secondItem="oyF-Nt-Xie" secondAttribute="centerX" id="7Dr-zu-OzK"/>
-                            <constraint firstItem="0IW-st-wbI" firstAttribute="top" secondItem="WA4-nB-7qJ" secondAttribute="bottom" constant="100" id="bzd-nA-IVC"/>
-                            <constraint firstItem="bdq-oR-7nX" firstAttribute="trailing" secondItem="0IW-st-wbI" secondAttribute="trailing" constant="75" id="cqu-of-Cym"/>
-                            <constraint firstItem="0IW-st-wbI" firstAttribute="leading" secondItem="bdq-oR-7nX" secondAttribute="leading" constant="75" id="eE0-6g-VFQ"/>
-                            <constraint firstItem="dpN-Ug-X2K" firstAttribute="top" secondItem="bdq-oR-7nX" secondAttribute="top" constant="5" id="eyw-9r-4V2"/>
+                            <constraint firstItem="WA4-nB-7qJ" firstAttribute="centerX" secondItem="oyF-Nt-Xie" secondAttribute="centerX" id="3G1-pb-0Lx"/>
+                            <constraint firstItem="dpN-Ug-X2K" firstAttribute="top" secondItem="bdq-oR-7nX" secondAttribute="top" constant="5" id="5u6-H3-CfS"/>
+                            <constraint firstItem="WA4-nB-7qJ" firstAttribute="top" secondItem="dpN-Ug-X2K" secondAttribute="bottom" constant="62" id="Kpy-Po-a2Z"/>
+                            <constraint firstItem="dpN-Ug-X2K" firstAttribute="centerX" secondItem="oyF-Nt-Xie" secondAttribute="centerX" id="QSZ-VT-0XE"/>
+                            <constraint firstItem="0IW-st-wbI" firstAttribute="top" secondItem="WA4-nB-7qJ" secondAttribute="bottom" constant="69" id="de6-yG-Ex9"/>
+                            <constraint firstItem="0IW-st-wbI" firstAttribute="leading" secondItem="bdq-oR-7nX" secondAttribute="leading" constant="80" id="f0s-1q-VpB"/>
+                            <constraint firstItem="bdq-oR-7nX" firstAttribute="trailing" secondItem="0IW-st-wbI" secondAttribute="trailing" constant="80" id="nSc-w3-83E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bdq-oR-7nX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Exchange" image="dollarsign.circle.fill" catalog="system" id="8QT-oY-zd8"/>
+                    <connections>
+                        <outlet property="amountLabel" destination="Oqu-f0-UnE" id="9hz-fm-gGb"/>
+                        <outlet property="amountTextField" destination="6yr-bO-WTH" id="JtI-cB-nF4"/>
+                        <outlet property="exchangeButton" destination="tuP-aE-hw4" id="3TX-rK-gX2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NwU-Xz-zx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,6 +105,6 @@
     <resources>
         <image name="ExchangeBackground" width="875" height="1348"/>
         <image name="ExchangeIcon" width="300" height="300"/>
-        <image name="dollarsign.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
