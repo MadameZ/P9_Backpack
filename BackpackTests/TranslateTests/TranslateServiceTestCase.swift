@@ -90,7 +90,6 @@ class TranslateServiceTestCase: XCTestCase {
             let translateService = TranslateService(translateSession: URLSessionFake(data: FakeResponseData.incorrectData, response: FakeResponseData.responseOK, error: nil))
 
             // When
-            /// On a un micro décalage car on n'est pas dans la même queue donc on fait une expectation. Les expectation servent à attendre.
             let expectation = XCTestExpectation(description: "Wait for queue change")
             translateService.getTranslate(text: "Bonjour") { (success, translate) in
                 // Then
@@ -111,7 +110,6 @@ class TranslateServiceTestCase: XCTestCase {
             let translateService = TranslateService(translateSession: URLSessionFake(data: FakeResponseData.translateCorrectData, response: FakeResponseData.responseOK, error: nil))
 
             // When
-            /// On a un micro décalage car on n'est pas dans la même queue donc on fait une expectation. Les expectation servent à attendre.
             let expectation = XCTestExpectation(description: "Wait for queue change")
             translateService.getTranslate(text: "Bonjour") { (success, translate) in
                 // Then
@@ -119,13 +117,11 @@ class TranslateServiceTestCase: XCTestCase {
                 XCTAssertNotNil(translate)
                 
                 let translatedText = "Hello"
-                
-            
-                
-                /// l'expectation est terminé
+                XCTAssertEqual(translatedText, translate!)
+
                 expectation.fulfill()
             }
-            /// le micro délais 0.01 ne va pas ralentir nos tests.
+       
             wait(for: [expectation], timeout: 0.01)
         }
            
