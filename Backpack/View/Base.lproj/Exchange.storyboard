@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WR5-gN-8FM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WR5-gN-8FM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,86 +15,110 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ExchangeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="UlC-FT-ipR">
-                                <rect key="frame" x="0.0" y="475" width="414" height="401"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="dpN-Ug-X2K" userLabel="Stack View Title">
-                                <rect key="frame" x="177" y="49" width="60" height="73"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8uz-N4-Ss4" userLabel="Stack View TF">
+                                <rect key="frame" x="40" y="128" width="334" height="34"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExchangeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="IHS-6I-8bO">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="0M6-P9-iQl"/>
-                                            <constraint firstAttribute="width" constant="60" id="GHt-dH-cMh"/>
-                                            <constraint firstAttribute="width" secondItem="IHS-6I-8bO" secondAttribute="height" multiplier="1:1" id="zd6-as-IDn"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My exchanges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Io-0t-e2b">
-                                        <rect key="frame" x="0.0" y="63" width="60" height="10"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="9"/>
-                                        <color key="textColor" red="0.4431372549" green="0.77897350509999996" blue="0.67642631109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entrer la valeur " textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6yr-bO-WTH">
+                                        <rect key="frame" x="0.0" y="0.0" width="306.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqd-NQ-eU7">
+                                        <rect key="frame" x="314.5" y="0.0" width="19.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="73" id="gK1-dO-cpd"/>
-                                    <constraint firstAttribute="width" secondItem="dpN-Ug-X2K" secondAttribute="height" multiplier="60:73" id="vPR-Ky-dbt"/>
-                                </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WA4-nB-7qJ" userLabel="Stack View exchange">
-                                <rect key="frame" x="140.5" y="184" width="133.5" height="123"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuP-aE-hw4">
+                                <rect key="frame" x="40" y="423" width="334" height="50"/>
+                                <color key="backgroundColor" red="0.1191734335" green="0.75305425469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Luj-9P-3nQ"/>
+                                </constraints>
+                                <state key="normal" title="Convertir"/>
+                                <connections>
+                                    <action selector="didTapConvertBtn:" destination="WR5-gN-8FM" eventType="touchUpInside" id="STG-0n-qFv"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WA4-nB-7qJ" userLabel="Stack View exchange">
+                                <rect key="frame" x="182" y="253" width="50" height="110"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqu-f0-UnE">
-                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="69"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqu-f0-UnE">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ug-BH-HJz">
-                                        <rect key="frame" x="55.5" y="77" width="22.5" height="46"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                        <rect key="frame" x="14" y="68" width="22.5" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="j9p-ov-jmW"/>
+                                </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-st-wbI" userLabel="Stack View buton">
-                                <rect key="frame" x="80" y="376" width="254" height="98"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your current value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yr-bO-WTH">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuP-aE-hw4">
-                                        <rect key="frame" x="0.0" y="64" width="254" height="34"/>
-                                        <color key="backgroundColor" red="0.4431372549" green="0.77897350509999996" blue="0.67642631109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Exchange"/>
-                                        <connections>
-                                            <action selector="tappedExchangeButton:" destination="WR5-gN-8FM" eventType="touchUpInside" id="1g7-8V-dq4"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IbR-SB-ORw" userLabel="Line dollar">
+                                <rect key="frame" x="40" y="192" width="334" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ZWO-hg-64Y"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tB-H9-SF9" userLabel="Line euro">
+                                <rect key="frame" x="40" y="94" width="334" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="8HK-W6-2ji"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valeur en euro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTv-we-7KE">
+                                <rect key="frame" x="40" y="102" width="87.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valeur en dollar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q68-F1-piw">
+                                <rect key="frame" x="40" y="200" width="94.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.029368903490000001" green="0.077001370489999998" blue="0.14341667289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1019419655" green="0.62448793650000001" blue="0.82413893940000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WA4-nB-7qJ" firstAttribute="centerX" secondItem="oyF-Nt-Xie" secondAttribute="centerX" id="3G1-pb-0Lx"/>
-                            <constraint firstItem="dpN-Ug-X2K" firstAttribute="top" secondItem="bdq-oR-7nX" secondAttribute="top" constant="5" id="5u6-H3-CfS"/>
-                            <constraint firstItem="WA4-nB-7qJ" firstAttribute="top" secondItem="dpN-Ug-X2K" secondAttribute="bottom" constant="62" id="Kpy-Po-a2Z"/>
-                            <constraint firstItem="dpN-Ug-X2K" firstAttribute="centerX" secondItem="oyF-Nt-Xie" secondAttribute="centerX" id="QSZ-VT-0XE"/>
-                            <constraint firstItem="0IW-st-wbI" firstAttribute="top" secondItem="WA4-nB-7qJ" secondAttribute="bottom" constant="69" id="de6-yG-Ex9"/>
-                            <constraint firstItem="0IW-st-wbI" firstAttribute="leading" secondItem="bdq-oR-7nX" secondAttribute="leading" constant="80" id="f0s-1q-VpB"/>
-                            <constraint firstItem="bdq-oR-7nX" firstAttribute="trailing" secondItem="0IW-st-wbI" secondAttribute="trailing" constant="80" id="nSc-w3-83E"/>
+                            <constraint firstItem="9tB-H9-SF9" firstAttribute="leading" secondItem="bdq-oR-7nX" secondAttribute="leading" constant="40" id="0Ie-U1-meJ"/>
+                            <constraint firstItem="bdq-oR-7nX" firstAttribute="trailing" secondItem="8uz-N4-Ss4" secondAttribute="trailing" constant="40" id="2x7-6k-GMU"/>
+                            <constraint firstItem="IbR-SB-ORw" firstAttribute="leading" secondItem="bdq-oR-7nX" secondAttribute="leading" constant="40" id="5Dv-rt-q2O"/>
+                            <constraint firstItem="WA4-nB-7qJ" firstAttribute="top" secondItem="IbR-SB-ORw" secondAttribute="bottom" constant="60" id="AK3-U9-21E"/>
+                            <constraint firstItem="8uz-N4-Ss4" firstAttribute="top" secondItem="XTv-we-7KE" secondAttribute="bottom" constant="10" id="HkA-PA-0ch"/>
+                            <constraint firstItem="IbR-SB-ORw" firstAttribute="top" secondItem="8uz-N4-Ss4" secondAttribute="bottom" constant="30" id="Ipv-qM-ZQT"/>
+                            <constraint firstItem="bdq-oR-7nX" firstAttribute="trailing" secondItem="IbR-SB-ORw" secondAttribute="trailing" constant="40" id="JeT-Zv-f9V"/>
+                            <constraint firstItem="8uz-N4-Ss4" firstAttribute="leading" secondItem="bdq-oR-7nX" secondAttribute="leading" constant="40" id="QMJ-N6-PxL"/>
+                            <constraint firstItem="bdq-oR-7nX" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="q68-F1-piw" secondAttribute="trailing" symbolic="YES" id="Qdh-Rq-4TO"/>
+                            <constraint firstItem="WA4-nB-7qJ" firstAttribute="centerX" secondItem="oyF-Nt-Xie" secondAttribute="centerX" id="RID-mX-aHM"/>
+                            <constraint firstItem="q68-F1-piw" firstAttribute="top" secondItem="IbR-SB-ORw" secondAttribute="bottom" constant="7" id="Tse-0G-MtL"/>
+                            <constraint firstItem="9tB-H9-SF9" firstAttribute="top" secondItem="bdq-oR-7nX" secondAttribute="top" constant="50" id="aaC-MI-6a8"/>
+                            <constraint firstItem="tuP-aE-hw4" firstAttribute="leading" secondItem="bdq-oR-7nX" secondAttribute="leading" constant="40" id="b3Y-f6-5y8"/>
+                            <constraint firstItem="q68-F1-piw" firstAttribute="leading" secondItem="bdq-oR-7nX" secondAttribute="leading" constant="40" id="bwD-bN-6Ab"/>
+                            <constraint firstItem="XTv-we-7KE" firstAttribute="top" secondItem="9tB-H9-SF9" secondAttribute="bottom" constant="7" id="coI-bI-bPT"/>
+                            <constraint firstItem="XTv-we-7KE" firstAttribute="leading" secondItem="bdq-oR-7nX" secondAttribute="leading" constant="40" id="mGK-V3-gfw"/>
+                            <constraint firstItem="bdq-oR-7nX" firstAttribute="trailing" secondItem="tuP-aE-hw4" secondAttribute="trailing" constant="40" id="uMf-RS-Zob"/>
+                            <constraint firstItem="bdq-oR-7nX" firstAttribute="trailing" secondItem="9tB-H9-SF9" secondAttribute="trailing" constant="40" id="uOs-a2-KWG"/>
+                            <constraint firstItem="bdq-oR-7nX" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XTv-we-7KE" secondAttribute="trailing" symbolic="YES" id="ufI-ca-srR"/>
+                            <constraint firstItem="tuP-aE-hw4" firstAttribute="top" secondItem="WA4-nB-7qJ" secondAttribute="bottom" constant="60" id="z1X-Jx-1xQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bdq-oR-7nX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Exchange" image="dollarsign.circle.fill" catalog="system" id="8QT-oY-zd8"/>
                     <connections>
-                        <outlet property="amountLabel" destination="Oqu-f0-UnE" id="9hz-fm-gGb"/>
                         <outlet property="amountTextField" destination="6yr-bO-WTH" id="JtI-cB-nF4"/>
-                        <outlet property="exchangeButton" destination="tuP-aE-hw4" id="3TX-rK-gX2"/>
+                        <outlet property="convertLabel" destination="Oqu-f0-UnE" id="9hz-fm-gGb"/>
+                        <outlet property="exchangeBtn" destination="tuP-aE-hw4" id="Nkq-y0-1iu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NwU-Xz-zx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -103,8 +127,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ExchangeBackground" width="875" height="1348"/>
-        <image name="ExchangeIcon" width="300" height="300"/>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
