@@ -44,7 +44,7 @@ struct Main: Decodable {
 //    case 500...531:
 //        return "rain"
 //    default:
-//        <#code#>
+//        
 //    }
 //}
 

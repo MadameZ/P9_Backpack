@@ -101,6 +101,7 @@ class WeatherService {
     private func getNYWeather(completionHandler: @escaping (WeatherJSON?) -> Void) {
         
         let newYorkCityURL = WeatherService.weatherURL + "?id=5128638&fr&lang=fr&units=metric&APPID=" + ApiKey.openWeather
+        print(newYorkCityURL)
         var request = URLRequest(url: URL(string: newYorkCityURL)!)
                request.httpMethod = "GET"
         
