@@ -329,6 +329,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5nh-ee-zZ9"/>
                     <connections>
+                        <outlet property="cancelLabel" destination="GJh-3J-Wxu" id="BHB-gb-hvm"/>
                         <outlet property="closeIv" destination="hTO-7o-z5p" id="2sQ-oS-135"/>
                         <outlet property="searchBar" destination="xyJ-9c-mbw" id="WDk-wN-tT9"/>
                         <outlet property="tableView" destination="IOD-Cp-cVm" id="nbT-V9-1Yh"/>

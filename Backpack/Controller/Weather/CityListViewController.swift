@@ -10,12 +10,14 @@ import UIKit
 
 class CityListViewController: UIViewController {
     
+    @IBOutlet weak var cancelLabel: UILabel!
     @IBOutlet weak var closeIv: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     // Array of cities
     var citiesArray: [City] = []
+    var selectedCitiesArray: [City] = []
 
     var isSearching = false
 
@@ -27,13 +29,12 @@ class CityListViewController: UIViewController {
         
         getCityList()
         
-        tapGesture()
+        tapGestureDismiss()
+        tapGestureCancel()
      
-        
         tableView.delegate = self
         tableView.dataSource = self
-//        
-//        searchBar.delegate = self
+        searchBar.delegate = self
         
     }
     
@@ -59,31 +60,68 @@ class CityListViewController: UIViewController {
         
     }
     
+    // MARK: - Tap Gesture
   
-    func tapGesture() {
+    func tapGestureDismiss() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-                    closeIv.isUserInteractionEnabled = true
-                    closeIv.addGestureRecognizer(tapGestureRecognizer)
+        closeIv.isUserInteractionEnabled = true
+        closeIv.addGestureRecognizer(tapGestureRecognizer)
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         dismiss(animated: true, completion: nil)
     }
     
+    func tapGestureCancel() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(labelTapped(tapGestureRecognizer:)))
+        cancelLabel.isUserInteractionEnabled = true
+        cancelLabel.addGestureRecognizer(tapGestureRecognizer)
+    }
+    @objc func labelTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        tableView.reloadData()
+    }
+    
 }
+
+
+// MARK: - TableView
 
 extension CityListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return citiesArray.count
+        return isSearching ? selectedCitiesArray.count : citiesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
         let index = indexPath.row
-        let country = citiesArray[index]
+        let country = isSearching ? selectedCitiesArray[index] : citiesArray[index]
         cell.textLabel?.text = country.name
         return cell
     }
+}
+
+// MARK: - SearchBar
+
+extension CityListViewController: UISearchBarDelegate {
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            isSearching = false
+            tableView.reloadData()
+        } else {
+            isSearching = true
+            selectedCitiesArray = citiesArray.filter({$0.name.lowercased().contains(searchText.lowercased())})
+            tableView.reloadData()
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        /// close the keyboard when search button clicked
+        view.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        tableView.reloadData()
+    }
     
 }
     
