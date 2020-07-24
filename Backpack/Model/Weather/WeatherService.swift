@@ -59,37 +59,35 @@ class WeatherService {
                             print(error.localizedDescription)
                         }
                         return
-                    }
-                    guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                        callback(false, nil)
-                        print("No response from responseJSON")
-                        return
-                    }
-                    
-                    
-                    guard let localWeather = try? JSONDecoder().decode(WeatherJSON.self, from: data) else {
-                        callback(false, nil)
-                        print("pas de responseJSON")
-                        return
-                    }
+                }
+                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                    callback(false, nil)
+                    print("No response from responseJSON")
+                    return
+                }
+                guard let localWeather = try? JSONDecoder().decode(WeatherJSON.self, from: data) else {
+                    callback(false, nil)
+                    print("pas de responseJSON")
+                    return
+                }
                 
-                    /// Get the weather of New York
-                    self.getNYWeather { (newYorkWeather) in
-                        /// Check for the weatherNY object
-                        guard let newYorkWeather = newYorkWeather else {
-                            callback(false, nil)
-                            return }
-                        
-                            /// Create an empty dictionnary
-                            var weatherDetails: [String: WeatherJSON] = [:]
-                        
-                            /// Fill the dictionnary
-                            weatherDetails["localCity"] = localWeather
-                            weatherDetails["newYork"] = newYorkWeather
-                        
-                            /// Passing the ditionnary
-                            callback(true, weatherDetails)
-                    }
+                /// Get the weather of New York
+                self.getNYWeather { (newYorkWeather) in
+                    /// Check for the weatherNY object
+                    guard let newYorkWeather = newYorkWeather else {
+                        callback(false, nil)
+                        return }
+                    
+                        /// Create an empty dictionnary
+                        var weatherDetails: [String: WeatherJSON] = [:]
+                    
+                        /// Fill the dictionnary
+                        weatherDetails["localCity"] = localWeather
+                        weatherDetails["newYork"] = newYorkWeather
+                    
+                        /// Passing the ditionnary
+                        callback(true, weatherDetails)
+                }
             }
  
         }

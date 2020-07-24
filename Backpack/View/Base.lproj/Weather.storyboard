@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BQ4-JL-buN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BQ4-JL-buN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -133,7 +133,7 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="mappin.and.ellipse" catalog="system"/>
                                                 <connections>
-                                                    <segue destination="iHg-tW-hTx" kind="show" id="zPC-mW-9XA"/>
+                                                    <segue destination="iHg-tW-hTx" kind="presentation" identifier="present" id="Xoi-kI-JsX"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpK-SJ-oXS">
@@ -264,19 +264,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wIc-Nd-3dR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="x.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lrj-2Y-GHR">
-                                        <rect key="frame" x="386" y="8.5" width="20" height="19"/>
-                                        <color key="tintColor" red="0.0039814300839999999" green="0.3451270461" blue="0.54573082920000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hTO-7o-z5p">
+                                        <rect key="frame" x="388.5" y="8.5" width="17.5" height="19"/>
+                                        <color key="tintColor" red="0.1019419655" green="0.62448793650000001" blue="0.82413893940000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="Ceu-wh-lkJ"/>
-                                            <constraint firstAttribute="width" secondItem="lrj-2Y-GHR" secondAttribute="height" id="xHo-EY-nAW"/>
+                                            <constraint firstAttribute="width" secondItem="hTO-7o-z5p" secondAttribute="height" multiplier="38:43" id="FNd-q2-aFK"/>
+                                            <constraint firstAttribute="height" constant="20" id="Xkk-Du-x6L"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="lrj-2Y-GHR" secondAttribute="trailing" constant="8" id="cDe-wQ-DrB"/>
-                                    <constraint firstItem="lrj-2Y-GHR" firstAttribute="top" secondItem="wIc-Nd-3dR" secondAttribute="top" constant="8" id="cOr-ZY-dXL"/>
+                                    <constraint firstItem="hTO-7o-z5p" firstAttribute="top" secondItem="wIc-Nd-3dR" secondAttribute="top" constant="8" id="1bh-eS-kdz"/>
+                                    <constraint firstAttribute="trailing" secondItem="hTO-7o-z5p" secondAttribute="trailing" constant="8" id="Nw7-GO-mm9"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Grm-5b-Wx1" userLabel="Stack View Search">
@@ -329,6 +329,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5nh-ee-zZ9"/>
                     <connections>
+                        <outlet property="closeIv" destination="hTO-7o-z5p" id="2sQ-oS-135"/>
                         <outlet property="searchBar" destination="xyJ-9c-mbw" id="WDk-wN-tT9"/>
                         <outlet property="tableView" destination="IOD-Cp-cVm" id="nbT-V9-1Yh"/>
                     </connections>
@@ -342,6 +343,6 @@
         <image name="cloud.fill" catalog="system" width="128" height="84"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
-        <image name="x.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

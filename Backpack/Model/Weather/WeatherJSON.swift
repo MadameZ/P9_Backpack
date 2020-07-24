@@ -10,20 +10,16 @@ import Foundation
 
 
 struct WeatherJSON: Decodable {
-    
     var weather: [WeatherData]
     var main: Main
     var name: String
-    
 }
 
 struct WeatherData: Decodable {
- 
     var description: String
     var icon: String
     var id: Int
-    var main: String
-    
+    var main: String  
 }
 
 struct Main: Decodable {
