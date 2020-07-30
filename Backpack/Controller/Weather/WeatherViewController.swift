@@ -11,6 +11,8 @@ import CoreLocation
 
 class WeatherViewController: UIViewController {
     
+
+    
     @IBOutlet weak var nameNYLbl: UILabel!
     @IBOutlet weak var descNYLbl: UILabel!
     @IBOutlet weak var iconNYIv: UIImageView!
@@ -31,16 +33,22 @@ class WeatherViewController: UIViewController {
     var manager = CLLocationManager()
     
 
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setupGradient()
         destListBtn.circle(destListBtn.frame.width / 2)
         localListBtn.circle(localListBtn.frame.width / 2)
-        
+
         date.text = convertirDate(date: Date())
         
         setupService()
+        
+    
     }
+    
+ 
     
     
     func setupService() {
@@ -62,6 +70,15 @@ class WeatherViewController: UIViewController {
                 Alert.present(title: MessageError.connexionFailTitle, message: MessageError.connexionFailWeatherDesc, vc: self)
             }
         }
+        
+    }
+    
+    @IBAction func destinationButtonTapped(_ sender: Any) {
+        let selectionVC = storyboard?.instantiateViewController(withIdentifier: "cityListScreen") as! CityListViewController
+        
+        // To use the datas passing with the delegate
+        selectionVC.delegate = self
+        present(selectionVC, animated: true, completion: nil)
         
     }
     
@@ -149,3 +166,23 @@ class WeatherViewController: UIViewController {
         }
     
 }
+
+
+
+
+
+
+extension WeatherViewController: ReceiveDataDelegate {
+    func passCity(data: City) {
+        // update the name of the destination :
+        nameNYLbl.text = data.name
+        
+        // update automatically the weather after QoL delay :
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.setupService()
+        }
+    }
+    
+}
+
+

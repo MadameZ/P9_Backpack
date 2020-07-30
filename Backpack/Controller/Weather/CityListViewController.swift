@@ -20,6 +20,8 @@ class CityListViewController: UIViewController {
     var selectedCitiesArray: [City] = []
 
     var isSearching = false
+    
+    var delegate: ReceiveDataDelegate?
 
 
     
@@ -37,6 +39,7 @@ class CityListViewController: UIViewController {
         searchBar.delegate = self
         
     }
+    
     
     private func getCityList() {
         
@@ -77,6 +80,9 @@ class CityListViewController: UIViewController {
         cancelLabel.addGestureRecognizer(tapGestureRecognizer)
     }
     @objc func labelTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        isSearching = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
         tableView.reloadData()
     }
     
@@ -95,9 +101,42 @@ extension CityListViewController: UITableViewDelegate, UITableViewDataSource {
         let index = indexPath.row
         let country = isSearching ? selectedCitiesArray[index] : citiesArray[index]
         cell.textLabel?.text = country.name
+//        cell.contentView.backgroundColor = UIColor(red: 0 / 255, green: 68 / 255, blue: 108 / 255, alpha: 1)
+        
+        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("Something is selected")
+        
+        var selectedCity: City
+        
+        if isSearching {
+            selectedCity = selectedCitiesArray[indexPath.row]
+        } else {
+            selectedCity = citiesArray[indexPath.row]
+        }
+        
+        let selectedCityId = String(selectedCity.id)
+        print("selectedCity" + selectedCity.name)
+        
+
+        
+        // Save city cityId in UserDefault :
+        SettingService.cityID = selectedCityId
+        
+        // Pass the data's object City with protocole :
+        delegate?.passCity(data: selectedCity)
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 }
+
+
+
+
 
 // MARK: - SearchBar
 

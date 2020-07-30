@@ -12,6 +12,8 @@ class WeatherService {
     
     static var shared = WeatherService()
     private init() {}
+//
+//    var passID = "5128638"
     
     private static let weatherURL = "https://api.openweathermap.org/data/2.5/weather"
 
@@ -45,6 +47,7 @@ class WeatherService {
     
     func getWeather(callback: @escaping (Bool, [String: WeatherJSON]?) -> Void) {
         
+        
         let request = WeatherService.weatherRequest()
         
         task?.cancel()
@@ -72,7 +75,7 @@ class WeatherService {
                 }
                 
                 /// Get the weather of New York
-                self.getNYWeather { (newYorkWeather) in
+                self.getNYWeather(id: SettingService.cityID) { (newYorkWeather) in
                     /// Check for the weatherNY object
                     guard let newYorkWeather = newYorkWeather else {
                         callback(false, nil)
@@ -96,9 +99,12 @@ class WeatherService {
     
 // MARK: - get the weather of New York
     
-    private func getNYWeather(completionHandler: @escaping (WeatherJSON?) -> Void) {
+    private func getNYWeather(id: String, completionHandler: @escaping (WeatherJSON?) -> Void) {
         
-        let newYorkCityURL = WeatherService.weatherURL + "?id=5128638&fr&lang=fr&units=metric&APPID=" + ApiKey.openWeather
+//        let newYorkCityURL = WeatherService.weatherURL + "?id=5128638&fr&lang=fr&units=metric&APPID=" + ApiKey.openWeather
+        
+        let newYorkCityURL = WeatherService.weatherURL + "?id=\(id)&fr&lang=fr&units=metric&APPID=" + ApiKey.openWeather
+        
         print(newYorkCityURL)
         var request = URLRequest(url: URL(string: newYorkCityURL)!)
                request.httpMethod = "GET"
@@ -136,15 +142,7 @@ class WeatherService {
         task?.resume()
      
     }
-        
-     
-    
- 
-    
-    
-    
-
-    
-    
-    
+         
 }
+
+
