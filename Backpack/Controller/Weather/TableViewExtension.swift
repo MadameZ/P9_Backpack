@@ -43,7 +43,7 @@ extension CityListViewController: UITableViewDelegate, UITableViewDataSource {
         
 
         
-        // Save city cityId in UserDefault :
+        // Save city cityId in UserDefaults :
         SettingService.cityID = selectedCityId
         
         // Pass the data's object City with protocole :

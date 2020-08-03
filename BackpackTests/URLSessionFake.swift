@@ -13,18 +13,19 @@ import Foundation
 // MARK: - URLSessionFake
 
 class URLSessionFake : URLSession {
-    /// On va doubler la méthode dataTask dont notre code a besoin pour fonctionner
-    
+     
     var data: Data?
     var response: URLResponse?
     var error: Error?
     
+    /// les instances vont être initialiser avec l'init. Les données qu'on va lui passer sont des données qu'on a créer dans FakeResponseData
     init(data: Data?, response: URLResponse?, error: Error?) {
         self.data = data
         self.response = response
         self.error = error
     }
     
+    /// On va doubler la méthode dataTask dont notre code a besoin pour fonctionner
     override func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         /// 1. On crée une instance de URLSessionDataTaskFake pour utiliser notre double :
         let task = URLSessionDataTaskFake()
@@ -67,7 +68,7 @@ class URLSessionDataTaskFake : URLSessionDataTask {
     var responseError: Error?
     
     /// Comme c'est instantané, resume ne doit pas lancer l'appel mais appeler directement le bloc de retour avec les données ed la réponse donc le bloc (data, response, error) in ->  jusqu'à task?.resume() dans la func getExchange ou getTranslate ou getWeather
-    /// Son rôle est dimplement d'appeler le bloc de retour
+    /// Son rôle est simplement d'appeler le bloc de retour
     override func resume() {
         completionHandler?(data, urlResponse, responseError)
     }

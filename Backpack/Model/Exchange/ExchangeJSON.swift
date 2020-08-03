@@ -8,6 +8,8 @@
 
 import Foundation
 
+/// Decodable is a protocol to decode JSON
+
 struct ExchangeJSON: Decodable {
     /// use only infos we need
     var base: String

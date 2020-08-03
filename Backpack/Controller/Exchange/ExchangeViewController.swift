@@ -40,6 +40,13 @@ class ExchangeViewController: UIViewController {
         
     }
     
+    @IBAction func didTapConvertBtn(_ sender: Any) {
+        setupService()
+        view.endEditing(true)
+    }
+    
+    // MARK: - convert
+    
      func convert(_ exchange: ExchangeJSON)  {
 
         guard let text = amountTextField.text, text != "" else {
@@ -53,12 +60,6 @@ class ExchangeViewController: UIViewController {
         /// String rounded to 2 decimal
         convertLabel.text = String(format: "%.2f", result)
      }
-
-
-    @IBAction func didTapConvertBtn(_ sender: Any) {
-        setupService()
-        view.endEditing(true)
-    }
 }
 
 

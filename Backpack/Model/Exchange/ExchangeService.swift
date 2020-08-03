@@ -11,24 +11,18 @@ import Foundation
 // Dans info.plist (pour autoriser http) : App transport security system -> YES
 
 class ExchangeService {
-    
+    /// Singleton pattern to use just one instance and private init so can't access to the init outside the class
     static var shared = ExchangeService()
     private init() {}
     
-
     private static let exchangeURL = "http://data.fixer.io/api/latest"
     
+    /// the same object task is use
     private var task: URLSessionDataTask?
     
-    /// property for injection of dependance. I keep this value for the app and use another value with URLSessionFake.
+    /// property for injection of dependance. I keep this value for the app and use instances of URLSessionFake for the tests.
     private var exchangeSession = URLSession(configuration: .default)
     
-    ///
-    /// A REGARDER ATTENTIVEMENT :
-    /// pour les tests, dans exchangeSession, on va injecter non pas des instances de URLSessions mais des instances de URLSessionFake.
-    /// dans la classe URLSessionFake : les instances vont être initialiser avec l'init. Les données qu'on va lui passer sont des données qu'on a créer dans FakeResponseData
-    /// Ensuite on appel la méthode getQuote puis va appeler une instance de quoteSession qui sera dans le cas des tests une instances de URLSessionFake. Donc la méthode qui va s'exécuter sera l'override de dataTask dans URLSessionFake
-    /// la fonction resume sera de type URLSessionDataTaskFake
     /// create an init to keep those properties private.
     init(exchangeSession: URLSession) {
         self.exchangeSession = exchangeSession
@@ -54,10 +48,9 @@ class ExchangeService {
     func getExchange(callback: @escaping (Bool, ExchangeJSON?) -> Void) {
         
         let request = ExchangeService.exchangeRequest()
-        
-        
+          
         task?.cancel()
-        
+        /// create task for the session
         task = exchangeSession.dataTask(with: request) { (data, response, error) in
             
             DispatchQueue.main.async {

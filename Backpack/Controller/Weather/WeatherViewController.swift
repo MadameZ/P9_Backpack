@@ -10,9 +10,7 @@ import UIKit
 import CoreLocation
 
 class WeatherViewController: UIViewController {
-    
 
-    
     @IBOutlet weak var nameNYLbl: UILabel!
     @IBOutlet weak var descNYLbl: UILabel!
     @IBOutlet weak var iconNYIv: UIImageView!

@@ -21,7 +21,7 @@ class FakeResponseData {
     
     // For Exchange Fake Data
     static var exchangeCorrectData: Data? {
-        /// Je demande le bundle qui cpontient le fichier de la classe dans laquelle je me trouve
+        /// Je demande le bundle qui contient le fichier de la classe dans laquelle je me trouve
         
         let url = bundle.url(forResource: "Exchange", withExtension: "json")!
         /// Je récupère les données contenues à cette url
