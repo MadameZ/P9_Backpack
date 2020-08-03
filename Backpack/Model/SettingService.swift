@@ -11,12 +11,9 @@ import Foundation
 class SettingService {
     
     private struct Key {
-        static let city = "city"
         static let cityID = "cityID"
     }
-    
 
-    
     
 //     For choosen city :
 

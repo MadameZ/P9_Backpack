@@ -15,6 +15,7 @@ class ExchangeViewController: UIViewController {
     @IBOutlet weak var exchangeBtn: UIButton!
     @IBOutlet weak var date: UILabel!
     
+    var exchange = Exchange()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +29,10 @@ class ExchangeViewController: UIViewController {
         ExchangeService.shared.getExchange { (success, exchange) in
             
             if success, let dataExchange = exchange {
-                guard self.checkForSameDate(exchange: dataExchange) else {
-                    return
-                }
+
+                guard self.exchange.checkForSameDate(exchange: dataExchange) else { return }
                 self.convert(dataExchange)
-             
+   
             } else {
                 Alert.present(title: MessageError.connexionFailTitle , message: MessageError.connexionFailExchangeDesc , vc: self)
             }
@@ -41,10 +41,10 @@ class ExchangeViewController: UIViewController {
     }
     
      func convert(_ exchange: ExchangeJSON)  {
-             
+
         guard let text = amountTextField.text, text != "" else {
          return Alert.present(title: MessageError.wrongInputTitle, message: MessageError.wrongInputDesc, vc: self)}
-           
+
         /// Replace , by a .
         let replaced = text.replacingOccurrences(of: ",", with: ".")
         guard let textDouble = Double(replaced) else { return }
@@ -54,18 +54,6 @@ class ExchangeViewController: UIViewController {
         convertLabel.text = String(format: "%.2f", result)
      }
 
-    
-    func checkForSameDate(exchange: ExchangeJSON) -> Bool {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let date = formatter.string(from: Date())
-        
-        guard exchange.date == date else {
-            /// if not the same date return false
-            return false
-        }
-        return true
-    }
 
     @IBAction func didTapConvertBtn(_ sender: Any) {
         setupService()
