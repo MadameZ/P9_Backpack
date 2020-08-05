@@ -1,6 +1,6 @@
 # P9_Backpack
 
-This app was made for the project 9 of OpenClassrooms formation to work an Apis, and how to write unit tests for Apis.
+This app was made for the project 9 of OpenClassrooms formation to work on Apis, and how to write unit tests for Apis.
 
 ## ApiKeys
 
