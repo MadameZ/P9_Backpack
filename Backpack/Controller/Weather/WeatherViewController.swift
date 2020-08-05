@@ -24,6 +24,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var destListBtn: UIButton!
  
     @IBOutlet weak var lineView: UIView!
+    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var dateLbl: UILabel!
     
@@ -65,12 +66,13 @@ extension WeatherViewController {
                if success, let weatherDetail = weatherDetail {
                    
                    self.toggleActivityIndicator(shown: false)
-                   
+                
+                   /// save objects with key newYor and localCity and display it
                    let weatherNY = weatherDetail["newYork"]
                    let weatherLocal = weatherDetail["localCity"]
                    
-                   self.setupNYInfo(weatherNY: weatherNY)
-                   self.setupLocalInfo(weatherLocal: weatherLocal)
+                   self.displayNYInfo(weatherNY: weatherNY)
+                   self.displayLocalInfo(weatherLocal: weatherLocal)
                    
                } else {
                    Alert.present(title: MessageError.connexionFailTitle, message: MessageError.connexionFailWeatherDesc, vc: self)
@@ -79,7 +81,7 @@ extension WeatherViewController {
            
        }
 
-       func setupNYInfo(weatherNY: WeatherJSON?) {
+       func displayNYInfo(weatherNY: WeatherJSON?) {
 
            guard let weatherNY = weatherNY else { return }
            
@@ -93,7 +95,7 @@ extension WeatherViewController {
 
        }
        
-        func setupLocalInfo(weatherLocal: WeatherJSON?) {
+        func displayLocalInfo(weatherLocal: WeatherJSON?) {
 
             guard let weatherLocal = weatherLocal else { return }
     

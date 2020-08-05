@@ -6,7 +6,7 @@
 //  Copyright © 2020 Caroline Zaini. All rights reserved.
 //
 
-/// On crée FakeResponseData pour récupérer les données sur les fichiers json et les utiliser dans les tests
+/// FakeResponseData est créée pour récupérer les données sur les fichiers json et les utiliser dans les tests
 /// Cette classe doit simuler la réponse d'un serveur lors de nos appels réseaux
 /// On doit simuler les 3 paramètres data, response et error
 
@@ -21,8 +21,7 @@ class FakeResponseData {
     
     // For Exchange Fake Data
     static var exchangeCorrectData: Data? {
-        /// Je demande le bundle qui contient le fichier de la classe dans laquelle je me trouve
-        
+        /// Je récupère le paquet dans lequel se trouve notre fichier de données
         let url = bundle.url(forResource: "Exchange", withExtension: "json")!
         /// Je récupère les données contenues à cette url
         return try! Data(contentsOf: url)

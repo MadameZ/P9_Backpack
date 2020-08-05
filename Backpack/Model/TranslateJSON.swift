@@ -11,7 +11,6 @@ import Foundation
 
 struct TranslateJSON: Decodable  {
     var data: DataExchange
-    
 }
 
 struct DataExchange: Decodable {
@@ -19,7 +18,6 @@ struct DataExchange: Decodable {
 }
 
 struct Translation: Decodable {
-    
     var translatedText: String
     var detectedSourceLanguage: String
     

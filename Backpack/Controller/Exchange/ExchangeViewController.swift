@@ -32,7 +32,7 @@ class ExchangeViewController: UIViewController {
 
                 guard self.exchange.checkForSameDate(exchange: dataExchange) else { return }
                 self.convert(dataExchange)
-   
+
             } else {
                 Alert.present(title: MessageError.connexionFailTitle , message: MessageError.connexionFailExchangeDesc , vc: self)
             }
@@ -44,6 +44,8 @@ class ExchangeViewController: UIViewController {
         setupService()
         view.endEditing(true)
     }
+    
+    
     
     // MARK: - convert
     

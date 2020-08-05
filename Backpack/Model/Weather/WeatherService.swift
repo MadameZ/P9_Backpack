@@ -12,8 +12,6 @@ class WeatherService {
     
     static var shared = WeatherService()
     private init() {}
-//
-//    var passID = "5128638"
     
     private static let weatherURL = "https://api.openweathermap.org/data/2.5/weather"
 
@@ -84,7 +82,7 @@ class WeatherService {
                         /// Create an empty dictionnary
                         var weatherDetails: [String: WeatherJSON] = [:]
                     
-                        /// Fill the dictionnary
+                        /// Fill the dictionnary with specific key for each value
                         weatherDetails["localCity"] = localWeather
                         weatherDetails["newYork"] = newYorkWeather
                     
@@ -100,8 +98,6 @@ class WeatherService {
 // MARK: - get the weather of New York
     
     private func getNYWeather(id: String, completionHandler: @escaping (WeatherJSON?) -> Void) {
-        
-//        let newYorkCityURL = WeatherService.weatherURL + "?id=5128638&fr&lang=fr&units=metric&APPID=" + ApiKey.openWeather
         
         let newYorkCityURL = WeatherService.weatherURL + "?id=\(id)&fr&lang=fr&units=metric&APPID=" + ApiKey.openWeather
         

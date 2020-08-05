@@ -15,7 +15,6 @@ class SettingService {
     }
     
 //     For choosen city :
-
     static var cityID: String {
         get {
             /// Recup the object. default operator, if it return nil so Key.cityID value is "5128638"
