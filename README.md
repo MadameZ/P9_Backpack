@@ -17,5 +17,9 @@ To run this app, you have to enter your own Apikeys in "Apikey.swift" file :
 - Save in User Defaults
 
 ## Screenshots
-![alt-text-1]<img width="315" alt="Capture d’écran 2020-08-05 à 10 09 52" src="https://user-images.githubusercontent.com/39524369/89392905-64dbe980-d70a-11ea-9446-b70c0df7ed14.png"> ![alt-text-2]<img width="317" alt="Capture d’écran 2020-08-05 à 10 12 40" src="https://user-images.githubusercontent.com/39524369/89392969-791fe680-d70a-11ea-9f59-b7a8df077bcd.png"> ![alt-text-3]<img width="313" alt="Capture d’écran 2020-08-05 à 10 13 07" src="https://user-images.githubusercontent.com/39524369/89392982-8046f480-d70a-11ea-9064-450d85a8c8a6.png">
+<p float="left">
+<img width="100" alt="Capture d’écran 2020-08-05 à 10 09 52" src="https://user-images.githubusercontent.com/39524369/89392905-64dbe980-d70a-11ea-9446-b70c0df7ed14.png"> 
+<img width="100" alt="Capture d’écran 2020-08-05 à 10 12 40" src="https://user-images.githubusercontent.com/39524369/89392969-791fe680-d70a-11ea-9f59-b7a8df077bcd.png"> 
+<img width="100" alt="Capture d’écran 2020-08-05 à 10 13 07" src="https://user-images.githubusercontent.com/39524369/89392982-8046f480-d70a-11ea-9064-450d85a8c8a6.png">
+</p>
 
